@@ -1,0 +1,1156 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"lay",
+				"layer2"
+			],
+			[
+				"la",
+				"layer2"
+			],
+			[
+				"n",
+				"num_neurons"
+			],
+			[
+				"in",
+				"init_func"
+			],
+			[
+				"Abs",
+				"abstractMethod"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"app",
+				"app	Ember.Application.create()"
+			],
+			[
+				"append",
+				"appendage"
+			],
+			[
+				"appe",
+				"appendages"
+			],
+			[
+				"cu",
+				"current"
+			],
+			[
+				"slo",
+				"slopesucc"
+			],
+			[
+				"sl",
+				"slopesucc"
+			],
+			[
+				"pre",
+				"prec"
+			],
+			[
+				"pos",
+				"pos1"
+			],
+			[
+				"po",
+				"pos0"
+			],
+			[
+				"int",
+				"intervals"
+			],
+			[
+				"ima",
+				"image_path"
+			],
+			[
+				"cur",
+				"current"
+			],
+			[
+				"pa",
+				"path"
+			],
+			[
+				"wal",
+				"walkable"
+			],
+			[
+				"suc",
+				"successor"
+			],
+			[
+				"pr",
+				"print"
+			],
+			[
+				"a",
+				"and"
+			],
+			[
+				"dist",
+				"dist_between"
+			],
+			[
+				"im",
+				"import"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"h",
+				"h_better"
+			],
+			[
+				"s",
+				"successor"
+			],
+			[
+				"succ",
+				"successors"
+			],
+			[
+				"be",
+				"wall_between"
+			],
+			[
+				"c",
+				"current"
+			],
+			[
+				"pix",
+				"pixels"
+			],
+			[
+				"lo",
+				"load"
+			],
+			[
+				"Pi",
+				"PriorityQueue"
+			],
+			[
+				"open",
+				"openQueue"
+			],
+			[
+				"load",
+				"load_image"
+			],
+			[
+				"word",
+				"word_dict"
+			],
+			[
+				"read",
+				"read_words"
+			],
+			[
+				"no",
+				"node"
+			],
+			[
+				"rand",
+				"randomGraph"
+			],
+			[
+				"nei",
+				"neighbors"
+			],
+			[
+				"part",
+				"particles"
+			],
+			[
+				"contro",
+				"controller"
+			],
+			[
+				"con",
+				"Controller"
+			],
+			[
+				"chil",
+				"chill_id"
+			],
+			[
+				"cont",
+				"controllers"
+			],
+			[
+				"A",
+				"AuthController"
+			],
+			[
+				"_c",
+				"_C"
+			],
+			[
+				"get",
+				"getControllerDirectory"
+			],
+			[
+				"pref",
+				"prefix"
+			],
+			[
+				"nam",
+				"namespaces"
+			],
+			[
+				"p",
+				"prefixes"
+			],
+			[
+				"ns",
+				"namespaces"
+			],
+			[
+				"Car",
+				"CarbRouter"
+			],
+			[
+				"class",
+				"classinfo"
+			],
+			[
+				"na",
+				"namespace"
+			],
+			[
+				"joi",
+				"joinPrefix"
+			],
+			[
+				"Carb",
+				"CarbNamespace"
+			],
+			[
+				"Con",
+				"_controllerDirectory"
+			],
+			[
+				"_C",
+				"_Cont"
+			],
+			[
+				"res",
+				"resource"
+			],
+			[
+				"clas",
+				"classinfo"
+			],
+			[
+				"contr",
+				"controllerName"
+			],
+			[
+				"T",
+				"TypeInfo_Class"
+			],
+			[
+				"cla",
+				"classinfo"
+			],
+			[
+				"en",
+				"enum"
+			],
+			[
+				"wri",
+				"writeln"
+			],
+			[
+				"uni",
+				"unittest"
+			],
+			[
+				"HTTp",
+				"HTTPServerRequest"
+			],
+			[
+				"add",
+				"addRoute"
+			],
+			[
+				"mem",
+				"member"
+			],
+			[
+				"has",
+				"hasAction"
+			],
+			[
+				"def",
+				"defaultControllerDirectory"
+			],
+			[
+				"_",
+				"_R"
+			],
+			[
+				"m_",
+				"m_controllerDirectory"
+			],
+			[
+				"to",
+				"toLower"
+			],
+			[
+				"H",
+				"HTTPMethod"
+			],
+			[
+				"meth",
+				"method"
+			],
+			[
+				"valid",
+				"validationParamHandler"
+			],
+			[
+				"valida",
+				"validationParamHandler"
+			],
+			[
+				"val",
+				"validate"
+			],
+			[
+				"write",
+				"writeln"
+			],
+			[
+				"str",
+				"string"
+			],
+			[
+				"wrie",
+				"writeJsonBody"
+			],
+			[
+				"param",
+				"params"
+			],
+			[
+				"fuc",
+				"functionArguments"
+			],
+			[
+				"ret",
+				"returnValue"
+			],
+			[
+				"member",
+				"memberName"
+			],
+			[
+				"metho",
+				"methodNameWanted"
+			],
+			[
+				"type",
+				"typeof"
+			],
+			[
+				"D",
+				"Dynamic"
+			],
+			[
+				"memb",
+				"memberName"
+			],
+			[
+				"Rout",
+				"RouteDefaults"
+			],
+			[
+				"Sa",
+				"saveChanges"
+			],
+			[
+				"editT",
+				"editTagComponent"
+			],
+			[
+				"edi",
+				"editTagComponent"
+			],
+			[
+				"templa",
+				"templateName"
+			],
+			[
+				"editTag",
+				"editTagModal"
+			],
+			[
+				"ab",
+				"abort"
+			],
+			[
+				"owner",
+				"ownerTags"
+			],
+			[
+				"own",
+				"ownedTags"
+			],
+			[
+				"conte",
+				"contenteditable"
+			],
+			[
+				"auth",
+				"authenticated"
+			],
+			[
+				"check",
+				"checkIfLoggedIn"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"previ",
+				"previewLoading"
+			],
+			[
+				"isV",
+				"isVideoLink"
+			],
+			[
+				"isI",
+				"isImageLink"
+			],
+			[
+				"em",
+				"embed"
+			],
+			[
+				"prev",
+				"previewLoading"
+			],
+			[
+				"canlo",
+				"canLoadMoreReplies"
+			],
+			[
+				"repl",
+				"repliesLoaded"
+			],
+			[
+				"addob",
+				"addObjects"
+			],
+			[
+				"addO",
+				"addObjects"
+			],
+			[
+				"un",
+				"underline"
+			],
+			[
+				"cl",
+				"click"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"isLo",
+				"isLoaded"
+			],
+			[
+				"getF",
+				"getFollowers"
+			],
+			[
+				"follow",
+				"followers"
+			],
+			[
+				"ind",
+				"index"
+			],
+			[
+				"isLoa",
+				"isLoading"
+			],
+			[
+				"loca",
+				"location"
+			],
+			[
+				"doc",
+				"document"
+			],
+			[
+				"trans",
+				"transitionTo"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"new",
+				"newTagId"
+			],
+			[
+				"typ",
+				"typeahead-post-tags"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "layers/layer.py",
+			"settings":
+			{
+				"buffer_size": 552,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "networks/network.py",
+			"settings":
+			{
+				"buffer_size": 343,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "layers/sigmoid.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "connections/connection.py",
+			"settings":
+			{
+				"buffer_size": 354,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "connections/full.py",
+			"settings":
+			{
+				"buffer_size": 331,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "utilities.py",
+			"settings":
+			{
+				"buffer_size": 444,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "__init__.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tools/__init__.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 187.0,
+		"selected_items":
+		[
+			[
+				"conver",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"conv",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"Snippet: ",
+				"Snippet: New Class"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 120.0,
+		"history":
+		[
+			"import urllib3,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print('Please restart Sublime Text to finish installation')",
+			"import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print('Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/kmcarbone16/Programming/Python/neural",
+		"/Users/kmcarbone16/Programming/Python/neural/connections",
+		"/Users/kmcarbone16/Programming/Python/neural/datasets",
+		"/Users/kmcarbone16/Programming/Python/neural/layers",
+		"/Users/kmcarbone16/Programming/Python/neural/networks",
+		"/Users/kmcarbone16/Programming/Python/neural/tools"
+	],
+	"file_history":
+	[
+		"/Users/kmcarbone16/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/kmcarbone16/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/kmcarbone16/Programming/Python/IS_Lab_1/main2.py",
+		"/Users/kmcarbone16/Programming/Python/OpenGL/test.py",
+		"/Users/kmcarbone16/Desktop/bfs.py",
+		"/Users/kmcarbone16/Desktop/CarbonComputed.CarbonFitness 2014-06-16 03.34.38.278.xcappdata/AppData/Documents/Workouts.json",
+		"/Users/kmcarbone16/Library/Application Support/iPhone Simulator/7.1/Applications/F65D596F-545C-4DA9-BAAA-82E1C996214C/Documents/History.json",
+		"/Users/kmcarbone16/Programming/XCode/test/test/Resources/hello-world.pod",
+		"/Users/kmcarbone16/Desktop/java.hprof_large.txt",
+		"/Users/kmcarbone16/Desktop/java.hprof_small.txt",
+		"/Users/kmcarbone16/Library/Application Support/iPhone Simulator/7.1/Applications/DC71662E-4E9E-4210-96A4-DD0CDBDF83AE/Documents/History.json",
+		"/Users/kmcarbone16/Documents/Resume/Resume_Revised/srt-resume.html",
+		"/Users/kmcarbone16/Desktop/graph.py",
+		"/Users/kmcarbone16/Desktop/randomgraph.py",
+		"/Users/kmcarbone16/Desktop/liquid.html",
+		"/Users/kmcarbone16/Programming/D/carb.d/source/carb/http/defaults.d",
+		"/Users/kmcarbone16/Programming/D/carb.d/package.json",
+		"/Users/kmcarbone16/Programming/D/carb.d/source/carb/base/route.d",
+		"/Users/kmcarbone16/Programming/D/carb.d/source/carb/http/mvc.d",
+		"/Users/kmcarbone16/Programming/D/carb.d/source/carb/base/controller.d",
+		"/Users/kmcarbone16/Programming/D/carb.d/source/carb/base/resource.d",
+		"/Users/kmcarbone16/Programming/D/carb.d/source/carb/app.d",
+		"/Users/kmcarbone16/Documents/Resume/Resume_Revised/resume.css",
+		"/Users/kmcarbone16/Programming/flotag/src/static/js/login.js",
+		"/Users/kmcarbone16/Programming/Flotag/src/static/js/app.js",
+		"/Users/kmcarbone16/Programming/Flotag/src/static/base.html",
+		"/Applications/Sublime Text.app/Contents/MacOS/changelog.txt"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"new Append",
+			".rotate",
+			"print",
+			"90",
+			"succes",
+			"print",
+			"heuris",
+			".job",
+			"tech",
+			"neighbo",
+			"rosso",
+			"virgin",
+			"birth of the virgin",
+			"visco",
+			"dvdy",
+			"dudy",
+			"dudx",
+			"dvdx",
+			"cx",
+			"step",
+			"weig",
+			"drag",
+			".pressed",
+			"10",
+			"this.init",
+			"this.active",
+			"actionav",
+			"writeln",
+			"pragma",
+			"writeln",
+			"routedefau",
+			"_con",
+			"]);",
+			"_namespaces",
+			"auth",
+			"missing quer",
+			"ActionRouter",
+			"controllerdire",
+			"id\"",
+			"id",
+			"pattern",
+			"maxRoute",
+			"Route(",
+			"continfo",
+			"maxrout",
+			"path",
+			"Action",
+			"addrout",
+			"writeln",
+			"pragma",
+			"Action",
+			"Format",
+			"isaction",
+			"_R",
+			"cont",
+			"controllerDi",
+			"con",
+			"isdynamica",
+			"isaction",
+			"init",
+			"json",
+			"validator",
+			"writeln",
+			"URLRouter",
+			"82",
+			"\"user\"",
+			"nav_bar",
+			"loadow",
+			"controllerfor",
+			"edittagcompone",
+			"edittagc",
+			"tagsmanager",
+			"updateTag",
+			"user-list",
+			"userprofile",
+			"imgurl",
+			"editprofile",
+			"edittagcomponent",
+			"editview",
+			"edittagcomp",
+			"components",
+			"component",
+			"updateuser",
+			"indexcontroller",
+			"processtags",
+			"proces",
+			"processtags",
+			"afterrend",
+			"tagcomp",
+			"processtags",
+			"tagcomp",
+			"processtags",
+			"tagcomp",
+			"tagcompon",
+			"settings",
+			"margin",
+			"self.controllerFor('application')",
+			"create-ta",
+			"_nav_bar",
+			"loadfo",
+			"userprofileimage",
+			"userprofileurl",
+			"ownertags",
+			"follower",
+			"{{view",
+			"tags-manager-view",
+			"changepass",
+			"changepassmodal",
+			"/tag",
+			"trendingtime",
+			"isCurrentUser",
+			"currentuser",
+			"\"user\"",
+			"application",
+			"controllers.application",
+			"application",
+			"self.get('application').refreshUser()",
+			"'application'",
+			"jqueryinit",
+			"controllers.application.currentUser",
+			"currentUser",
+			"checkif",
+			"debugger",
+			"checkifl",
+			"login",
+			"check",
+			"logincontroller",
+			"getcurrentuser:"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "layers/layer.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 552,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								468,
+								468
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "networks/network.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 343,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								132,
+								132
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "layers/sigmoid.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "connections/connection.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 354,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								212,
+								212
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "connections/full.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								249,
+								249
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "utilities.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 444,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								352,
+								352
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "__init__.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "tools/__init__.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 88.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "neural.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 204.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
