@@ -1,17 +1,28 @@
 __author__ = 'Kevin Carbone'
 
-from neural.utilities import *
 from neural.neurons.neuron import Neuron
-from neural.tools.functions import *
+
 
 class BiasNeuron(Neuron):
     """Bias Neuron, dot(input,weights)"""
-    def __init__(self,val=1):
+    def __init__(self, activate=1):
         Neuron.__init__(self)
-        self.val = 1
+        self.input = activate
+        self.activate = activate
 
-    def g(self,x):
-        return self.val
+    def update(self, alpha, momentum):
+        for edge in self.forwardEdges:
+            edge.weight += (self.delta * alpha * 10)
 
-    def g_prime(self,x):
-        return self.val
+    def backward(self):
+        r = 0
+        for edge in self.forwardEdges:
+            r += (edge.target.delta * (self.activate * edge.weight))
+        self.prev_delta = self.delta
+        self.delta = self.g_prime(self.input) * r
+
+    def g(self, x):
+        return self.activate
+
+    def g_prime(self, x):
+        return self.activate

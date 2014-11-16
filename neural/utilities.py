@@ -1,7 +1,7 @@
 __author__ = 'Kevin Carbone'
 
 import random
-# random.seed(10)
+random.seed(10)
 
 def abstractMethod():
     """ This should be called when an abstract method is called that should have been

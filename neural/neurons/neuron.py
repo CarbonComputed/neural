@@ -7,47 +7,36 @@ from neural.utilities import *
 class Neuron(object):
     """Neuron Base Class"""
     def __init__(self):
-        self.input = []
-        self.weights = []
-        self.output = []
-        self.dot = 0
+        self.forwardEdges = []
+        self.backwardEdges = []
+        self.input = 0
         self.activate = 0
         self.delta = 0
-        self._out = 0
-        self._in = 0
+        self.prev_delta = 0
 
-    def feed(self, input, bias):
-        self.bias = bias
-        self.input.append(input)
-
-    def clear(self):
-        self.input = []
-        self.output = []
-
-    def activation(self):
-        result = 0
-        for i,j in self.input:
-            result += (i * j)
-        self._in = result + self.bias
-        self.activate = self.g(self._in + self.bias)
-        self.input = []
+    def forward(self, bias_edge=None):
+        self.input = 0
+        bias_edge_w = 0
+        bias_edge_a = 0
+        if bias_edge:
+            bias_edge_w = bias_edge.weight
+            bias_edge_a = bias_edge.source.activate
+        for edge in self.backwardEdges:
+            self.input += (edge.weight * edge.source.activate)
+        self.input += (bias_edge_w * bias_edge_a)
+        self.activate = self.g(self.input)
         return self.activate
 
-    def forward(self):
-        self.output = []
-        a = self.activate
-        if len(self.weights) <= 0:
-            #Most likely an output neuron
-            self.weights = [1]
-        for w in self.weights:
-            self.output.append([w, a])
+    def backward(self):
+        r = 0
+        for edge in self.forwardEdges:
+            r += (edge.target.delta * edge.weight)
+        self.prev_delta = self.delta
+        self.delta = self.g_prime(self.input) * r
 
-        return self.output
-
-    def backward(self, func, deltas):
-        r = dot(self.weights,deltas)
-        self.delta = func(self._in) * r
-        
+    def update(self, alpha, momentum):
+        for edge in self.forwardEdges:
+            edge.weight += (alpha * self.activate * edge.target.delta) + (self.prev_delta * momentum)
 
     def g(self, x):
         abstractMethod()
@@ -57,15 +46,29 @@ class Neuron(object):
 
     @property
     def __repr__(self):
-        return str(self.__class__.__name__) + "\nactivate " + str(self.activate)+str(self.input) + "\noutput" + str(self.output) + " \nweights " + str(self.weights) + "\n"
+        return str(self.__class__.__name__) + "\nactivate " + str(self.activate) + "\noutput" + str("") + " \nweights " + str(self.forwardEdges) + "\n"
 
     def __str__(self):
-        return str(self.__class__.__name__) + "\nactivate " + str(self.activate)+str(self.input) + "\noutput" + str(self.output) + " \nweights " + str(self.weights) + "\n"
+        return str(self.__class__.__name__) + "\nactivate " + str(self.activate) + "\noutput" + str("") + " \nweights " + str(self.forwardEdges) + "\n"
+
 
 class Edge:
-   def __init__(self, source, target):
-      self.weight = random.uniform(-1,1)
-      self.source = source
-      self.target = target
-      source.outgoingEdges.append(self)
-      target.incomingEdges.append(self)
+    def __init__(self, source, target, weight_f=random_weight):
+        self.weight = weight_f()
+        self.source = source
+        self.target = target
+
+    def __str__(self):
+        return str(self.weight)
+
+class NormalEdge(Edge):
+    def __init__(self, source, target, weight_f=random_weight):
+        Edge.__init__(self,source,target,weight_f)
+        source.forwardEdges.append(self)
+        target.backwardEdges.append(self)
+
+
+class BiasEdge(Edge):
+    def __init__(self, source, target, weight_f=random_weight):
+        Edge.__init__(self,source,target,weight_f)
+        source.forwardEdges.append(self)
