@@ -21,6 +21,7 @@ class Neuron(object):
         if bias_edge:
             bias_edge_w = bias_edge.weight
             bias_edge_a = bias_edge.source.activate
+
         for edge in self.backwardEdges:
             self.input += (edge.weight * edge.source.activate)
         self.input += (bias_edge_w * bias_edge_a)

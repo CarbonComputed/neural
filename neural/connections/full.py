@@ -30,7 +30,7 @@ class FullConnection(Connection):
             neuron.backward()
         self.layer1.bias.backward()
 
-    def update(self, alpha=0.01, momentum=0.4):
+    def update(self, alpha=0.01, momentum=0.9):
         for neuron in self.layer1:
             neuron.update(alpha, momentum)
         self.layer1.bias.update(alpha,momentum)

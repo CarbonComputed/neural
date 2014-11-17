@@ -10,16 +10,21 @@ class BiasNeuron(Neuron):
         self.input = activate
         self.activate = activate
 
+    def forward(self, bias_edge=None):
+        self.activate = 1
+        self.input = 1
+        return self.activate
+
     def update(self, alpha, momentum):
         for edge in self.forwardEdges:
-            edge.weight += (self.delta * alpha * 10)
+            edge.weight += (edge.target.delta * alpha)
 
     def backward(self):
         r = 0
         for edge in self.forwardEdges:
             r += (edge.target.delta * (self.activate * edge.weight))
         self.prev_delta = self.delta
-        self.delta = self.g_prime(self.input) * r
+        self.delta = 1 * r
 
     def g(self, x):
         return self.activate

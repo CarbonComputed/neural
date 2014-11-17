@@ -21,8 +21,10 @@ class OutputConnection(Connection):
         """
         Propagates the neurons error backwards
         """
+        diffs = []
         for neuron in self.layer1:
             neuron.delta = neuron.g_prime(neuron.input) * (output - neuron.activate)
-        # print neuron.delta
+            diffs.append(squared_error(output, neuron.activate))
+        return diffs
 
 

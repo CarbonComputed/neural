@@ -9,6 +9,8 @@ from neural.networks.feedforward import FeedForwardNetwork
 from neural.datasets.dataset import Dataset
 from neural.datasets.xor import XORDataset
 
+import neural.utilities
+
 
 class FeedForwardNetworkTest(unittest.TestCase):
     """Unit tests for a FeedForwardNetwork"""
@@ -34,16 +36,17 @@ class FeedForwardNetworkTest(unittest.TestCase):
     def test_train(self):
         """Test the networks training"""
         dataset = XORDataset()
-        self.network.train(dataset,alpha = 0.1)
+        self.network.train(dataset, alpha = 0.7, momentum=0)
         # print self.network
         test_data = Dataset()
-        test_data.addData([1,1],0)
+        test_data.addData([1,0],0)
         # print(str(self.network))
         # for n in self.network.layers[-1]:
         #     print n
         self.network.test(test_data)
         # print "TEST"
         # print self.network
+        print neural.utilities.seed
         for n in self.network.layers[-1]:
             print n
 

@@ -1,7 +1,11 @@
 __author__ = 'Kevin Carbone'
 
 import random
-random.seed(10)
+import sys
+
+seed = random.randint(0, sys.maxint)
+random.seed(seed)
+# random.seed(1586760772949995824)
 
 def abstractMethod():
     """ This should be called when an abstract method is called that should have been
@@ -23,6 +27,10 @@ def zero():
 
 def random_weight():
     return random.uniform(-1,1)
+
+def squared_error(expected, actual):
+    ea = expected - actual
+    return ea * ea
 
 def dot(a,b):
     result = 0

@@ -12,9 +12,14 @@ class FeedForwardNetwork(LayeredNetwork):
         LayeredNetwork.__init__(self, output_conn)
 
 
-    def train(self, dataset, alpha=0.01, momentum=0.4):
-        for k in range(5000):
-            # random.shuffle(dataset.data)
+    def train(self, dataset, threshold=0.1, alpha=0.01, momentum=0.9):
+        epoch = 0
+        error_sum = 0
+        error = 1
+        n = 0
+        print error,threshold
+        while error > threshold:
+            random.shuffle(dataset.data)
             for example in dataset:
                 for k, i in enumerate(example[0]):
                     self.layers[0][k].activate = i
@@ -22,11 +27,16 @@ class FeedForwardNetwork(LayeredNetwork):
                 for conn in self.connections:
                     conn.forward()
                 self.output_conn.forward()
-                self.output_conn.backward(example[1])
+                errors = self.output_conn.backward(example[1])
+                error_sum += sum(errors)
+                n += len(errors)
+                error = error_sum/n
+                print epoch,error
                 for conn in reversed(self.connections):
                     conn.backward()
                 for conn in self.connections:
                     conn.update(alpha, momentum)
+            epoch += 1
 
     def test(self, dataset):
         for example in dataset:
