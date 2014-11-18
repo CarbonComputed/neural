@@ -7,7 +7,7 @@ from neural.layers.sigmoid import SigmoidLayer
 from neural.layers.linear import LinearLayer
 from neural.networks.feedforward import FeedForwardNetwork
 from neural.datasets.dataset import Dataset
-from neural.datasets.xor import XORDataset
+from neural.datasets.language import LanguageDataset
 
 import neural.utilities
 
@@ -16,10 +16,10 @@ class FeedForwardNetworkTest(unittest.TestCase):
     """Unit tests for a FeedForwardNetwork"""
 
     def setUp(self):
-        self.input = LinearLayer(2,True)
-        self.hidden = SigmoidLayer(50,True)
-        self.output = SigmoidLayer(1,False)
-        self.output2 = LinearLayer(1,False)
+        self.input = LinearLayer(26,True)
+        self.hidden = SigmoidLayer(9,True)
+        self.output = SigmoidLayer(3,False)
+        self.output2 = LinearLayer(3,False)
         self.in_hidden = FullConnection(self.input,self.hidden)
         self.hidden_out = FullConnection(self.hidden,self.output)
         self.out_out2 = OutputConnection(self.output,self.output2)
@@ -35,11 +35,10 @@ class FeedForwardNetworkTest(unittest.TestCase):
 
     def test_train(self):
         """Test the networks training"""
-        dataset = XORDataset()
-        self.network.train(dataset, alpha = 0.7, momentum=0)
+        dataset = LanguageDataset()
+        self.network.train(dataset, threshold=0.1, alpha = 0.7, momentum=0.5,max_epoch=500)
         # print self.network
-        test_data = Dataset()
-        test_data.add([1,0],[0])
+        test_data = LanguageDataset()
         # print(str(self.network))
         # for n in self.network.layers[-1]:
         #     print n
@@ -47,8 +46,8 @@ class FeedForwardNetworkTest(unittest.TestCase):
         # print "TEST"
         # print self.network
         print neural.utilities.seed
-        for n in self.network.layers[-1]:
-            print n
+        # for n in self.network.layers[-1]:
+        #     print n
 
         # print(self.output)
 

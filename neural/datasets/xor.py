@@ -8,7 +8,7 @@ class XORDataset(Dataset):
     """docstring for Dataset"""
     def __init__(self):
         Dataset.__init__(self)
-        self.addData([0,0],1)
-        self.addData([0,1],0)
-        self.addData([1,0],0)
-        self.addData([1,1],1)
+        self.add([0,0],[1])
+        self.add([0,1],[0])
+        self.add([1,0],[0])
+        self.add([1,1],[1])

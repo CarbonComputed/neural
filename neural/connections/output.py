@@ -17,14 +17,14 @@ class OutputConnection(Connection):
         for j, neuron2 in enumerate(self.layer2):
             neuron2.forward()
 
-    def backward(self, output):
+    def backward(self, outputs):
         """
         Propagates the neurons error backwards
         """
         diffs = []
-        for neuron in self.layer1:
-            neuron.delta = neuron.g_prime(neuron.input) * (output - neuron.activate)
-            diffs.append(squared_error(output, neuron.activate))
+        for o, neuron in enumerate(self.layer1):
+            neuron.delta = neuron.g_prime(neuron.input) * (outputs[o] - neuron.activate)
+            diffs.append(squared_error(outputs[o], neuron.activate))
         return diffs
 
 

@@ -32,6 +32,13 @@ def squared_error(expected, actual):
     ea = expected - actual
     return ea * ea
 
+def normalize(input):
+    old_min = min(input)
+    old_range = max(input) - old_min
+    new_min = 0.0
+    new_range = 1.0
+    return [float((n - old_min) / old_range * new_range + new_min) for n in input]
+
 def dot(a,b):
     result = 0
     for i,j in zip(a,b):
