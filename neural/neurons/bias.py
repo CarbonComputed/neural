@@ -16,12 +16,12 @@ class BiasNeuron(Neuron):
         return self.activate
 
     def update(self, alpha, momentum):
-        for edge in self.forwardEdges:
+        for edge in self.forward_edges:
             edge.weight += (edge.target.delta * alpha)
 
     def backward(self):
         r = 0
-        for edge in self.forwardEdges:
+        for edge in self.forward_edges:
             r += (edge.target.delta * (self.activate * edge.weight))
         self.prev_delta = self.delta
         self.delta = 1 * r

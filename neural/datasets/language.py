@@ -5,6 +5,7 @@ from neural.datasets.dataset import Dataset
 from neural.utilities import *
 import lxml.html
 import string
+import re
 
 
 
@@ -40,7 +41,8 @@ class LanguageDataset(Dataset):
                     input = self.extract_features(text)
                     # norm_input = normalize(input.values())
                     output = [1 if l==x else 0 for x in range(len(self.languages))]
-                    self.add(input.values(),output,text)
+                    if sum(input.values()) > .1:
+                        self.add(input.values(),output,text)
 
 
 
@@ -62,3 +64,7 @@ class LanguageDataset(Dataset):
         return html_tree.docinfo.URL,p_content
 
 
+def remove_bad_chars(str):
+    return re.findall("[a-z]+", str.lower())
+
+remove_bad_chars("Alkjlk567670-!@")

@@ -7,8 +7,8 @@ from neural.utilities import *
 class Neuron(object):
     """Neuron Base Class"""
     def __init__(self):
-        self.forwardEdges = []
-        self.backwardEdges = []
+        self.forward_edges = []
+        self.backward_edges = []
         self.input = 0
         self.activate = 0
         self.delta = 0
@@ -22,7 +22,7 @@ class Neuron(object):
             bias_edge_w = bias_edge.weight
             bias_edge_a = bias_edge.source.activate
 
-        for edge in self.backwardEdges:
+        for edge in self.backward_edges:
             self.input += (edge.weight * edge.source.activate)
         self.input += (bias_edge_w * bias_edge_a)
         self.activate = self.g(self.input)
@@ -30,13 +30,13 @@ class Neuron(object):
 
     def backward(self):
         r = 0
-        for edge in self.forwardEdges:
+        for edge in self.forward_edges:
             r += (edge.target.delta * edge.weight)
         self.prev_delta = self.delta
         self.delta = self.g_prime(self.input) * r
 
     def update(self, alpha, momentum):
-        for edge in self.forwardEdges:
+        for edge in self.forward_edges:
             edge.weight += (alpha * self.activate * edge.target.delta) + (self.prev_delta * momentum)
 
     def g(self, x):
@@ -47,10 +47,10 @@ class Neuron(object):
 
     @property
     def __repr__(self):
-        return str(self.__class__.__name__) + "\nactivate " + str(self.activate) + "\noutput" + str("") + " \nweights " + str(self.forwardEdges) + "\n"
+        return str(self.__class__.__name__) + "\nactivate " + str(self.activate) + "\noutput" + str("") + " \nweights " + str(self.forward_edges) + "\n"
 
     def __str__(self):
-        return str(self.__class__.__name__) + "\nactivate " + str(self.activate) + "\noutput" + str("") + " \nweights " + str(self.forwardEdges) + "\n"
+        return str(self.__class__.__name__) + "\nactivate " + str(self.activate) + "\noutput" + str("") + " \nweights " + str(self.forward_edges) + "\n"
 
 
 class Edge:
@@ -65,11 +65,11 @@ class Edge:
 class NormalEdge(Edge):
     def __init__(self, source, target, weight_f=random_weight):
         Edge.__init__(self,source,target,weight_f)
-        source.forwardEdges.append(self)
-        target.backwardEdges.append(self)
+        source.forward_edges.append(self)
+        target.backward_edges.append(self)
 
 
 class BiasEdge(Edge):
     def __init__(self, source, target, weight_f=random_weight):
         Edge.__init__(self,source,target,weight_f)
-        source.forwardEdges.append(self)
+        source.forward_edges.append(self)

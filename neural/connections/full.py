@@ -18,7 +18,7 @@ class FullConnection(Connection):
 
     def forward(self):
         for j, neuron2 in enumerate(self.layer2):
-            neuron2.forward(self.layer1.bias.forwardEdges[j])
+            neuron2.forward(self.layer1.bias.forward_edges[j])
 
 
     def backward(self):
