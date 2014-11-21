@@ -1,7 +1,8 @@
 __author__ = 'Kevin Carbone'
 
 from neural.utilities import *
-
+import datetime
+import pickle
 
 class Network(object):
     """Base Class for Network"""
@@ -20,3 +21,9 @@ class Network(object):
         for l in self.layers:
             string += str(l)
         return string
+
+    def save(self, filename=None):
+        if not filename:
+            filename = "network " + str(datetime.datetime.now())
+        with open(filename,"wb") as handle:
+            pickle.dump(self, handle)

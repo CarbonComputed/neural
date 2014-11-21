@@ -49,6 +49,7 @@ class FeedForwardNetworkTest(unittest.TestCase):
         print neural.utilities.seed
         for n in self.network.layers[-1]:
             print n
+        self.network.save()
 
         # print(self.output)
 

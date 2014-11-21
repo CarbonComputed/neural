@@ -20,10 +20,10 @@ class LanguageDataset(Dataset):
         print "Dataset Built"
 
     def extract_features(self,data):
-        d = dict(zip(string.ascii_lowercase, (0 for x in range(0,27))))
+        d = dict(zip(string.letters, (0 for x in range(0,53))))
         for ch in data:
-            if d.get(ch.lower(),None) != None:
-                d[ch.lower()] += 1.0
+            if d.get(ch,None) != None:
+                d[ch] += 1.0
         total = sum(d.values())
         for k in d.keys():
             if total == 0:
@@ -35,7 +35,7 @@ class LanguageDataset(Dataset):
 
     def build_dataset(self):
         for l,lang in enumerate(self.languages):
-            segments = self.retrieve_segments(lang,10)
+            segments = self.retrieve_segments(lang,20)
             for seg in segments:
                 for text in seg[1]:
                     input = self.extract_features(text)
@@ -58,13 +58,8 @@ class LanguageDataset(Dataset):
     def retrieve_segment(cls, url, min_chars=150):
         html_tree = lxml.html.parse(url)
         p_tags = html_tree.xpath('//p')
-        p_content = [p.text_content() for p in p_tags if len(p.text_content())>min_chars]
+        p_content = [p.text_content() for p in p_tags
+                     if len(filter(lambda c: not c.isdigit(), p.text_content())) > min_chars]
         if len(p_content) <=0:
             return cls.retrieve_segment(url, min_chars)
         return html_tree.docinfo.URL,p_content
-
-
-def remove_bad_chars(str):
-    return re.findall("[a-z]+", str.lower())
-
-remove_bad_chars("Alkjlk567670-!@")

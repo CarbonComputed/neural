@@ -41,6 +41,8 @@ class FeedForwardNetwork(LayeredNetwork):
 
     def test(self, dataset):
         random.shuffle(dataset.data)
+        correct = 0
+        t = 0
         for example in dataset:
             for k, i in enumerate(example[0]):
                 self.layers[0][k].activate = i
@@ -48,7 +50,15 @@ class FeedForwardNetwork(LayeredNetwork):
             for conn in self.connections:
                 conn.forward()
             self.output_conn.forward()
-            print example
-            for n in self.layers[-1]:
-                print n
+
+            actual = max(enumerate(self.layers[-1]),key=lambda x: x[1].activate)[0]
+            expected = max(enumerate(example[1]),key=lambda x: x[1])[0]
+            if actual == expected:
+                correct += 1.0
+            else:
+                print example
+                for n in self.layers[-1]:
+                    print n
+            t += 1
+        print(float(correct)/float(t))
 

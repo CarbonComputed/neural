@@ -1,7 +1,8 @@
 
 __author__ = 'Kevin Carbone'
 
-from neural.utilities import *
+import pickle
+import datetime
 
 class Dataset(object):
     """docstring for Dataset"""
@@ -20,3 +21,10 @@ class Dataset(object):
 
     def __len__(self):
         return len(self.neurons)
+
+    def save(self, filename=None):
+        if not filename:
+            filename = "dataset " + str(datetime.datetime.now())
+        print self.data
+        with open(filename,"wb") as handle:
+            pickle.dump(self.data, handle, pickle.HIGHEST_PROTOCOL)
