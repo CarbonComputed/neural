@@ -1,5 +1,5 @@
 
-import unittest
+# import unittest
 from neural.connections.full import FullConnection
 from neural.connections.output import OutputConnection
 
@@ -12,7 +12,7 @@ from neural.datasets.language import LanguageDataset
 import neural.utilities
 
 
-class LanguageNetworkTest(unittest.TestCase):
+class LanguageLoadNetwork():
     """Unit tests for a FeedForwardNetwork"""
 
     def setUp(self):
@@ -35,26 +35,23 @@ class LanguageNetworkTest(unittest.TestCase):
 
     def test_train(self):
         """Test the networks training"""
-        dataset = LanguageDataset(ndocuments=20)
-        dataset.save()
 
-        self.network.train(dataset, threshold=0.1, alpha = 0.1, momentum=0.0,max_epoch=10000)
-        # print self.network
+        self.network = self.network.load("")
 
+        text = " "
+        while text != "":
+            text = raw_input("Enter a string to test or hit return to end the program:")
+            if text == "":
+                break
+            test_data = LanguageDataset(ndocuments=0)
+            test_data.add_text(text)
+            self.network.test(test_data)
+            languages = ["English", "Italian", "Dutch"]
+            for i,n in enumerate(self.network.layers[-1]):
+                print n.activate, "sure it's", languages[i]
 
-        test_data = LanguageDataset(ndocuments=12)
-        # print(str(self.network))
-        # for n in self.network.layers[-1]:
-        #     print n
-        self.network.test(test_data,debug=True)
-        self.network.save()
-        # print "TEST"
-        # print self.network
-        print neural.utilities.seed
-        # for n in self.network.layers[-1]:
-        #     print n
-
-        # print(self.output)
 
 if __name__ == "__main__":
-    unittest.main()
+    l = LanguageLoadNetwork()
+    l.setUp()
+    l.test_train()

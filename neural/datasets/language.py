@@ -11,12 +11,12 @@ import re
 
 class LanguageDataset(Dataset):
     """docstring for Dataset"""
-    def __init__(self,languages=None,offline=True):
+    def __init__(self,languages=None,offline=True, ndocuments=10):
         Dataset.__init__(self)
         self.languages = []
         if not languages:
             self.languages.extend(["en","it","nl"])
-        self.build_dataset()
+        self.build_dataset(ndocuments)
         print "Dataset Built"
 
     def extract_features(self,data):
@@ -25,24 +25,30 @@ class LanguageDataset(Dataset):
             if d.get(ch,None) != None:
                 d[ch] += 1.0
         total = sum(d.values())
-        for k in d.keys():
+        result = []
+        for k in sorted(d.keys()):
             if total == 0:
-                d[k] = 0
+                result.append(0)
             else:
-                d[k] = float(d[k])/float(total)
-        return d
+                result.append(float(d[k])/float(total))
+        return result
 
 
-    def build_dataset(self):
+    def add_text(self,text):
+        input = self.extract_features(text)
+        output = [0,0,0]
+        self.add(input,output,text)
+
+    def build_dataset(self, ndocuments=10):
         for l,lang in enumerate(self.languages):
-            segments = self.retrieve_segments(lang,20)
+            segments = self.retrieve_segments(lang, ndocuments)
             for seg in segments:
                 for text in seg[1]:
                     input = self.extract_features(text)
                     # norm_input = normalize(input.values())
                     output = [1 if l==x else 0 for x in range(len(self.languages))]
-                    if sum(input.values()) > .1:
-                        self.add(input.values(),output,text)
+                    if sum(input) > .1:
+                        self.add(input,output,text)
 
 
 
@@ -57,9 +63,18 @@ class LanguageDataset(Dataset):
     @classmethod
     def retrieve_segment(cls, url, min_chars=150):
         html_tree = lxml.html.parse(url)
-        p_tags = html_tree.xpath('//p')
+        if not html_tree:
+            return cls.retrieve_segment(url, min_chars)
+        try:
+            p_tags = html_tree.xpath('//p')
+        except AssertionError, e:
+            return cls.retrieve_segment(url, min_chars)
         p_content = [p.text_content() for p in p_tags
                      if len(filter(lambda c: not c.isdigit(), p.text_content())) > min_chars]
+        s_content = []
+        for p in p_content:
+            sentences = p.split(".")
+            s_content.extend(sentences)
         if len(p_content) <=0:
             return cls.retrieve_segment(url, min_chars)
-        return html_tree.docinfo.URL,p_content
+        return html_tree.docinfo.URL,s_content

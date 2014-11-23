@@ -39,7 +39,7 @@ class FeedForwardNetwork(LayeredNetwork):
             if epoch > max_epoch:
                 return
 
-    def test(self, dataset):
+    def test(self, dataset, debug=False):
         random.shuffle(dataset.data)
         correct = 0
         t = 0
@@ -55,10 +55,11 @@ class FeedForwardNetwork(LayeredNetwork):
             expected = max(enumerate(example[1]),key=lambda x: x[1])[0]
             if actual == expected:
                 correct += 1.0
-            else:
+            elif debug:
                 print example
                 for n in self.layers[-1]:
                     print n
             t += 1
-        print(float(correct)/float(t))
+        if debug:
+            print(float(correct)/float(t))
 
