@@ -26,15 +26,13 @@ class Network(object):
 
     def save(self, filename=None):
         if not filename:
-            filename = "network " + str(datetime.datetime.now())
-        with open(filename,"wb") as handle:
+            filename = os.path.join(os.path.dirname(__file__), '..', 'data/networks/', str(datetime.datetime.now()) + ".network")
+        with open(filename, "wb") as handle:
             pickle.dump(self, handle)
 
     def load(self, filename=None):
-        if not filename:
-            filename = os.path.join(os.path.dirname(__file__), '..', 'data/networks/default_sent.network')
         network = None
         with open(filename, 'rb') as handle:
-          network = pickle.load(handle)
+            network = pickle.load(handle)
         # self = network
         return network

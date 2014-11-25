@@ -1,17 +1,14 @@
 
-# import unittest
 from neural.connections.full import FullConnection
 from neural.connections.output import OutputConnection
-
 from neural.layers.sigmoid import SigmoidLayer
 from neural.layers.linear import LinearLayer
 from neural.networks.feedforward import FeedForwardNetwork
-from neural.datasets.dataset import Dataset
 from neural.datasets.language import LanguageDataset
-
 import neural.utilities
-
+import os
 import sys
+
 
 class LanguageLoadNetwork():
     """Unit tests for a FeedForwardNetwork"""
@@ -58,7 +55,7 @@ class LanguageLoadNetwork():
     def test_test(self):
         """Test the networks training"""
 
-        self.network = self.network.load("")
+        self.network = self.network.load(os.path.join(os.path.dirname(__file__), '..', 'data/networks/default_sent.network'))
 
         text = " "
         while text != "":

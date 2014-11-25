@@ -38,6 +38,7 @@ class LanguageNetworkTest(unittest.TestCase):
         dataset = LanguageDataset(ndocuments=20)
         dataset.save()
 
+        print dataset.data
         self.network.train(dataset, threshold=0.1, alpha = 0.1, momentum=0.0,max_epoch=10000)
         # print self.network
 
@@ -46,7 +47,7 @@ class LanguageNetworkTest(unittest.TestCase):
         # print(str(self.network))
         # for n in self.network.layers[-1]:
         #     print n
-        self.network.test(test_data,debug=True)
+        self.network.test(test_data, debug=True)
         self.network.save()
         # print "TEST"
         # print self.network

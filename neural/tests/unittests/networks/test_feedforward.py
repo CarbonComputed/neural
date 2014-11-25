@@ -2,13 +2,11 @@
 import unittest
 from neural.connections.full import FullConnection
 from neural.connections.output import OutputConnection
-
 from neural.layers.sigmoid import SigmoidLayer
 from neural.layers.linear import LinearLayer
 from neural.networks.feedforward import FeedForwardNetwork
 from neural.datasets.dataset import Dataset
 from neural.datasets.xor import XORDataset
-
 import neural.utilities
 
 

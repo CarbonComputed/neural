@@ -9,7 +9,6 @@ class SigmoidNeuron(Neuron):
     def __init__(self):
         Neuron.__init__(self)
 
-
     def g(self, x):
         return sigmoid(x)
 

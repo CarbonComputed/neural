@@ -3,6 +3,7 @@ __author__ = 'Kevin Carbone'
 
 import pickle
 import datetime
+import os
 
 class Dataset(object):
     """docstring for Dataset"""
@@ -22,9 +23,15 @@ class Dataset(object):
     def __len__(self):
         return len(self.neurons)
 
+    def load(self, filename=None):
+        dataset = None
+        with open(filename, 'rb') as handle:
+            dataset = pickle.load(handle)
+        return dataset
+
     def save(self, filename=None):
         if not filename:
-            filename = "dataset " + str(datetime.datetime.now())
-        print self.data
-        with open(filename,"wb") as handle:
+            filename = os.path.join(os.path.dirname(__file__), '..', 'data/datasets/', str(datetime.datetime.now()) + ".dataset")
+        print filename
+        with open(filename, "wb") as handle:
             pickle.dump(self.data, handle, pickle.HIGHEST_PROTOCOL)

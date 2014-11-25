@@ -51,8 +51,8 @@ class FeedForwardNetwork(LayeredNetwork):
                 conn.forward()
             self.output_conn.forward()
 
-            actual = max(enumerate(self.layers[-1]),key=lambda x: x[1].activate)[0]
-            expected = max(enumerate(example[1]),key=lambda x: x[1])[0]
+            actual = max(enumerate(self.layers[-1]), key=lambda x: x[1].activate)[0]
+            expected = max(enumerate(example[1]), key=lambda x: x[1])[0]
             if actual == expected:
                 correct += 1.0
             elif debug:

@@ -62,6 +62,7 @@ class Edge:
     def __str__(self):
         return str(self.weight)
 
+
 class NormalEdge(Edge):
     def __init__(self, source, target, weight_f=random_weight):
         Edge.__init__(self,source,target,weight_f)

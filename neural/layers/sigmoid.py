@@ -1,7 +1,5 @@
 __author__ = 'Kevin Carbone'
 
-from neural.utilities import *
-from neural.tools.functions import *
 from neural.layers.layer import Layer
 from neural.neurons.sigmoid import SigmoidNeuron
 
