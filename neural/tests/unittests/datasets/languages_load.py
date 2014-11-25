@@ -11,6 +11,7 @@ from neural.datasets.language import LanguageDataset
 
 import neural.utilities
 
+import sys
 
 class LanguageLoadNetwork():
     """Unit tests for a FeedForwardNetwork"""
@@ -31,9 +32,30 @@ class LanguageLoadNetwork():
         self.network.add_connection(self.in_hidden)
         self.network.add_connection(self.hidden_out)
 
-
-
     def test_train(self):
+        """Test the networks training"""
+        dataset = LanguageDataset(ndocuments=20)
+        dataset.save()
+
+        self.network.train(dataset, threshold=0.1, alpha = 0.1, momentum=0.0,max_epoch=10000)
+        # print self.network
+
+
+        test_data = LanguageDataset(ndocuments=12)
+        # print(str(self.network))
+        # for n in self.network.layers[-1]:
+        #     print n
+        self.network.test(test_data,debug=True)
+        self.network.save()
+        # print "TEST"
+        # print self.network
+        print neural.utilities.seed
+        # for n in self.network.layers[-1]:
+        #     print n
+
+        # print(self.output)
+
+    def test_test(self):
         """Test the networks training"""
 
         self.network = self.network.load("")
@@ -54,4 +76,7 @@ class LanguageLoadNetwork():
 if __name__ == "__main__":
     l = LanguageLoadNetwork()
     l.setUp()
-    l.test_train()
+    if len(sys.argv) > 1 and sys.argv[1] == "train":
+        l.test_train()
+    else:
+        l.test_test()
