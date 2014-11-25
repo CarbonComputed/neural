@@ -1,4 +1,5 @@
-# Neural: A neural networking library written in Python
+# Neural 
+## A neural networking library written in Python
 
 ### Example:
 ```
