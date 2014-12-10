@@ -55,7 +55,7 @@ class LanguageLoadNetwork():
     def test_test(self):
         """Test the networks training"""
 
-        self.network = self.network.load(os.path.join(os.path.dirname(__file__), '..', 'data/networks/default_sent.network'))
+        self.network = self.network.load(os.path.join(os.path.dirname(__file__), '..', 'neural/data/networks/default_sent.network'))
 
         text = " "
         while text != "":

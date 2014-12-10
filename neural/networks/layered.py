@@ -2,12 +2,13 @@ __author__ = 'Kevin Carbone'
 
 from neural.utilities import *
 from neural.networks.network import Network
+from neural.connections.output import OutputConnection
 
 
 class LayeredNetwork(Network):
     """Base Class for Network"""
 
-    def __init__(self, output_conn):
+    def __init__(self, output_conn=None):
         Network.__init__(self)
         self.layers = []
         self.connections = []

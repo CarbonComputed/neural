@@ -3,12 +3,14 @@ __author__ = 'Kevin Carbone'
 from neural.connections.connection import Connection
 from neural.utilities import *
 from neural.neurons.neuron import NormalEdge
-
+from neural.layers.linear import LinearLayer
 
 class OutputConnection(Connection):
     """Normal Neural Net behaviour the output of one layer feeds into the input of the next"""
 
-    def __init__(self, layer1, layer2):
+    def __init__(self, layer1, layer2=None):
+        if layer2 == None:
+            layer2 = LinearLayer(layer1.num_neurons)
         Connection.__init__(self, layer1, layer2)
         for i, neuron in enumerate(self.layer1):
             NormalEdge(neuron, self.layer2[i], one)

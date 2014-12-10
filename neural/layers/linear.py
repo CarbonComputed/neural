@@ -7,6 +7,5 @@ from neural.neurons.linear import LinearNeuron
 class LinearLayer(Layer):
     """Base class for different types of layers."""
     def __init__(self, num_neurons,bias=True):
-        Layer.__init__(self,num_neurons,bias)
-        self.neurons.extend([LinearNeuron() for x in range(num_neurons)])
+        Layer.__init__(self,num_neurons, LinearNeuron, bias)
 

@@ -10,8 +10,8 @@ class Dataset(object):
     def __init__(self):
         self.data = []
     
-    def add(self,input,out,data=None):
-        self.data.append([input,out,data])
+    def add(self, input, out, data=None):
+        self.data.append([input, out, data])
 
     def __iter__(self):
         for data in self.data:
